@@ -25,3 +25,6 @@ body {
     text-wrap: balance;
   }
 }
+.button{
+  background-image: linear-gradient(to bottom, #36bffb, #0887ff);
+}
