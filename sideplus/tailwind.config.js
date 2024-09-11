@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roc:["var(--font-roc-grotesk)"],
+        sans: ["var(--font-opensans)"],
+        mono: ["var(--font-roboto-mono)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -9,6 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Second from "../components/Second";
 const page = () => {
   const router = useRouter();
   const session = useSession();
@@ -21,11 +22,6 @@ const page = () => {
     offset:["start end","end start"]
   })
   const scale=useTransform(scrollYProgress,[0,1],[1,1.3])
-  useEffect(()=>{
-    scrollYProgress.onChange((val)=>{
-      console.log(val)
-    })
-  })
   return (
     <div className="bg-[#171717]">
       <div className="bg-[url('https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/63d3c74f2c8dce26ba36947e_1673614238746.webp')] h-screen bg-center">
@@ -58,9 +54,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="h-[100vh] block">
-        
-      </div>
+      <Second></Second>
     </div>
   );
 };

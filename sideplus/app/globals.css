@@ -28,3 +28,6 @@ body {
 .button{
   background-image: linear-gradient(to bottom, #36bffb, #0887ff);
 }
+.roc{
+  font-family: var(--font-roc-grotesk);
+}
