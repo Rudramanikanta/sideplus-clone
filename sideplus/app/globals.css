@@ -31,3 +31,12 @@ body {
 .roc{
   font-family: var(--font-roc-grotesk);
 }
+.item {
+  background-size: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+  background-size: 110%;
+  opacity: 70;
+}
