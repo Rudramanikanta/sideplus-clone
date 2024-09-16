@@ -12,7 +12,8 @@ import { useEffect, useRef } from "react";
 import Second from "../components/Second";
 import image from "./image.png";
 import BTS from "./BTS.svg";
-import Third from "./third.svg";
+import Prize from "./third.svg";
+import { Third } from "../components/Third";
 const page = () => {
   const router = useRouter();
   const session = useSession();
@@ -153,10 +154,11 @@ const page = () => {
           images={images3}
           prev={false}
           buttonText="See all loyalty rewards"
-          image={Third}
+          image={Prize}
           side="We like to give back to you guys"
         ></Second>
       </motion.div>
+      <Third></Third>
     </div>
   );
 };
