@@ -90,7 +90,34 @@ const page = () => {
     [0, 1],
     ["100px", "-80px"]
   );
+  const three=[
 
+    {
+      image:"/first.png",
+      para:"Exclusive access to all the new shows, and series. Behind the scenes, Unfiltered and only avaliable to Side+ subscribers"
+    },
+    {
+      image:"/second.png",
+      para:"The Sidecast is our exclusive podcast where we chat about everything without any judgement. New episode every week"
+    }
+    ,
+    {
+      image:"/third.png",
+      para:"We want to talk about what you guys are wondering. Every week we pick questions sent in from you and answer them on the Sidecast"
+    },
+    {
+      image:"/four.png",
+      para:"Join our competitions to be picked for our fan dinners in London, monthly zoom calls and the 100K club!"
+    },
+    {
+      image:"/five.png",
+      para:"Monthly loyalty rewards for members like next-gen consoles, Iphones, clothing and Sidemen memorabilia"
+    },
+    {
+      image:"/image.png",
+      para:"Be part of the club that we always scour first when picking people for our content. keep an eye out for upcoming shoots"
+    }
+  ]
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
   return (
     <div className="bg-[#171717]">
@@ -159,10 +186,13 @@ const page = () => {
         ></Second>
       </motion.div>
       <div className="grid items-center content-center justify-center grid-cols-3 p-10 align-middle gap-x-6">
-      <Third></Third>
-      <Third></Third>
-      <Third></Third>
-      <Third></Third>
+      {
+        three.map((val)=>{
+          return(
+            <Third image={val.image} para={val.para}></Third>
+          )
+        })
+      }
       </div>
       <div className="h-[50vh] block">
         

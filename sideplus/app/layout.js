@@ -18,7 +18,7 @@ const roc=localFont({
   weight:"100 900"
 })
 export const metadata = {
-  title: "Sideplus clone",
+  title: "Side+ clone",
   description: "create by rudra manikanta dedicated to maxy",
 };
 
