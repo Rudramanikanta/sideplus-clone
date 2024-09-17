@@ -158,7 +158,15 @@ const page = () => {
           side="We like to give back to you guys"
         ></Second>
       </motion.div>
+      <div className="grid items-center content-center justify-center grid-cols-3 p-10 align-middle gap-x-6">
       <Third></Third>
+      <Third></Third>
+      <Third></Third>
+      <Third></Third>
+      </div>
+      <div className="h-[50vh] block">
+        
+      </div>
     </div>
   );
 };
