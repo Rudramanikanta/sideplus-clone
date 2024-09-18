@@ -14,6 +14,7 @@ import image from "./image.png";
 import BTS from "./BTS.svg";
 import Prize from "./third.svg";
 import { Third } from "../components/Third";
+import Fourth from "../components/Fourth";
 const page = () => {
   const router = useRouter();
   const session = useSession();
@@ -90,34 +91,32 @@ const page = () => {
     [0, 1],
     ["100px", "-80px"]
   );
-  const three=[
-
+  const three = [
     {
-      image:"/first.png",
-      para:"Exclusive access to all the new shows, and series. Behind the scenes, Unfiltered and only avaliable to Side+ subscribers"
+      image: "/first.png",
+      para: "Exclusive access to all the new shows, and series. Behind the scenes, Unfiltered and only avaliable to Side+ subscribers",
     },
     {
-      image:"/second.png",
-      para:"The Sidecast is our exclusive podcast where we chat about everything without any judgement. New episode every week"
-    }
-    ,
-    {
-      image:"/third.png",
-      para:"We want to talk about what you guys are wondering. Every week we pick questions sent in from you and answer them on the Sidecast"
+      image: "/second.png",
+      para: "The Sidecast is our exclusive podcast where we chat about everything without any judgement. New episode every week",
     },
     {
-      image:"/four.png",
-      para:"Join our competitions to be picked for our fan dinners in London, monthly zoom calls and the 100K club!"
+      image: "/third.png",
+      para: "We want to talk about what you guys are wondering. Every week we pick questions sent in from you and answer them on the Sidecast",
     },
     {
-      image:"/five.png",
-      para:"Monthly loyalty rewards for members like next-gen consoles, Iphones, clothing and Sidemen memorabilia"
+      image: "/four.png",
+      para: "Join our competitions to be picked for our fan dinners in London, monthly zoom calls and the 100K club!",
     },
     {
-      image:"/image.png",
-      para:"Be part of the club that we always scour first when picking people for our content. keep an eye out for upcoming shoots"
-    }
-  ]
+      image: "/five.png",
+      para: "Monthly loyalty rewards for members like next-gen consoles, Iphones, clothing and Sidemen memorabilia",
+    },
+    {
+      image: "/image.png",
+      para: "Be part of the club that we always scour first when picking people for our content. keep an eye out for upcoming shoots",
+    },
+  ];
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
   return (
     <div className="bg-[#171717]">
@@ -185,17 +184,14 @@ const page = () => {
           side="We like to give back to you guys"
         ></Second>
       </motion.div>
-      <div className="grid items-center content-center justify-center grid-cols-3 p-10 align-middle gap-x-6">
-      {
-        three.map((val)=>{
-          return(
-            <Third image={val.image} para={val.para}></Third>
-          )
-        })
-      }
+      <div className="grid items-center content-center justify-center grid-cols-1 p-10 align-middle lg:grid-cols-3 gap-x-6">
+        {three.map((val) => {
+          return <Third image={val.image} para={val.para}></Third>;
+        })}
       </div>
-      <div className="h-[50vh] block">
-        
+
+      <div className="p-14">
+        <Fourth></Fourth>
       </div>
     </div>
   );

@@ -9,8 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         roc:["var(--font-roc-grotesk)"],
-        sans: ["var(--font-opensans)"],
-        mono: ["var(--font-roboto-mono)"],
+        
       },
       colors: {
         background: "var(--background)",

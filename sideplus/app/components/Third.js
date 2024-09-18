@@ -23,9 +23,9 @@ export const Third = ({image,para}) => {
         src={image}
         width={150}
         height={150}
-        className="w-[220px] object-contain h-[220px] group-hover:h-[140px] group-hover:w-[140px]  transform transition-all duration-100 ease-in  group-hover:-translate-y-2"
+        className="lg:w-[220px] lg:relative object-contain lg:h-[220px] group-hover:h-[140px] group-hover:w-[140px]  transform transition-all duration-100 ease-in  group-hover:-translate-y-2"
       ></Image>
-      <p className="text-sm relative font-thin w-[300px] group-hover:opacity-100 -mt-20 group-hover:mt-0 duration-200 transform text-center opacity-0  text-neutral-500 tracking-wide leading-5 align-center">
+      <p className="text-sm lg:relative relative font-thin w-[300px] group-hover:opacity-100 lg:-mt-20 group-hover:mt-0 duration-200 transform text-center lg:opacity-0  text-neutral-500 tracking-wide leading-5 align-center">
         {para}
       </p>
     </motion.div>

@@ -41,7 +41,7 @@ const Second = ({ images, prev, buttonText, image, side }) => {
           <div
           key={index}
           style={{ backgroundImage: `url(${val.img})` }}
-          className="relative group block bg-center h-[380px] rounded-lg overflow-hidden  bg-no-repeat transform hover:bg-neutral-400 bg-cover  duration-300 animate   transition-all ease-in hover:bg-large hover:opacity-65"
+          className="relative  group block bg-center h-[380px] rounded-lg overflow-hidden  bg-no-repeat transform hover:bg-neutral-400 bg-cover  duration-300 animate   transition-all ease-in hover:bg-large hover:opacity-65"
         >
           <button
             className="absolute flex px-3 font-bold text-black transition-all duration-300 ease-in transform bg-white opacity-0 group-hover:opacity-100 group-hover:translate-y-0 rounded-r-md bottom-10 -translate-y-1/4"
