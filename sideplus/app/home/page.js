@@ -15,13 +15,13 @@ import BTS from "./BTS.svg";
 import Prize from "./third.svg";
 import { Third } from "../components/Third";
 import Fourth from "../components/Fourth";
+import Membership from "../components/Membership";
 const page = () => {
   const router = useRouter();
   const session = useSession();
-  if (session.data == null) {
+  if (session.data ==null  || session.data==undefined) {
     router.push("/");
   }
-  console.log(session);
   const big = useRef(null);
   const { scrollYProgress } = useScroll({
     target: big,
@@ -192,6 +192,9 @@ const page = () => {
 
       <div className="p-14">
         <Fourth></Fourth>
+      </div>
+      <div>
+        <Membership></Membership>
       </div>
     </div>
   );

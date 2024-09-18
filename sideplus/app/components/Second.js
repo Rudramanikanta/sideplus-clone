@@ -17,7 +17,7 @@ const Second = ({ images, prev, buttonText, image, side }) => {
 
   return (
     <motion.div
-      className="mb-24"
+      
       ref={ref}
       variants={animation}
       initial="hidden"
