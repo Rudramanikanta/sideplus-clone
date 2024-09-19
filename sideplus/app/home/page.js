@@ -193,7 +193,7 @@ const page = () => {
       <div className="p-14">
         <Fourth></Fourth>
       </div>
-      <div>
+      <div className="p-12">
         <Membership></Membership>
       </div>
     </div>

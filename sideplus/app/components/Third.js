@@ -4,9 +4,7 @@ import Prize from "../home/third.svg";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 export const Third = ({image,para}) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
+  const { ref, inView } = useInView();
   const animation = {
     hidden: { y: 100, opacity: 0 },
     visible: { y: 0, opacity: 1 },

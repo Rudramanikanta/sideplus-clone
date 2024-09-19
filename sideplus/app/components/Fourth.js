@@ -8,9 +8,7 @@ const Fourth = () => {
     hidden: { y: 100, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
+  const { ref, inView } = useInView();
   return (
     <motion.div
       ref={ref}

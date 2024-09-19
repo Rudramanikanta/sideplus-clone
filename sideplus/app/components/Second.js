@@ -6,9 +6,7 @@ import Image from "next/image";
 
 const Second = ({ images, prev, buttonText, image, side }) => {
  
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
+  const { ref, inView } = useInView();
 
   const animation = {
     hidden: { y: 100, opacity: 0 },
