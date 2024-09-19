@@ -30,9 +30,9 @@ const Membership = () => {
           <div className='gap-y-5'>
             {
               data.slice(0,4).map(
-                (val)=>{
+                (val,index)=>{
                   return(
-                    <p className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
+                    <p key={index} className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
                   )
                 }
               )
@@ -41,9 +41,9 @@ const Membership = () => {
           <div className='gap-y-5'>
             {
               data.slice(4,8).map(
-                (val)=>{
+                (val,index)=>{
                   return(
-                    <p className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
+                    <p key={index} className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
                   )
                 }
               )
@@ -52,9 +52,9 @@ const Membership = () => {
           <div>
             {
               data.slice(8,12).map(
-                (val)=>{
+                (val,index)=>{
                   return(
-                    <p className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
+                    <p key={index} className='flex mt-7 gap-x-2 align-center '><Image width={20} height={20} src="https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/611a2ff26de5eb5ec3011966_Side_tick.svg"></Image>{val}</p>
                   )
                 }
               )
