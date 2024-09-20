@@ -21,7 +21,9 @@ const Membership = () => {
       "Cancel or pause your subscription anytine you like, no hassle",
       "Available on web , mobile and cast to your TV"
     ]
-    const {ref,inView}=useInView()
+    const {ref,inView}=useInView({
+      triggerOnce:true
+    })
   return (
     <motion.div ref={ref} initial="hidden" variants={animation} animate={inView?"visible":"hidden"} 
     className='border-2 shadow-xl ring-neutral-600 rounded-xl border-neutral-800'>
