@@ -1,4 +1,4 @@
-import React from 'react'
+
 import MainComponent from './MainComponent'
 
 const page = () => {
