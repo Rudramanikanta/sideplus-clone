@@ -1,5 +1,5 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import "../globals.css";
 import { useRouter } from "next/navigation";
@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import Second from "../components/Second";
 import image from "./image.png";
 import BTS from "./BTS.svg";
@@ -19,9 +19,6 @@ import Membership from "../components/Membership";
 const MainComponent = () => {
   const router = useRouter();
   const session = useSession();
-  if (session.data ==null  || session.data==undefined) {
-    router.push("/");
-  }
   const big = useRef(null);
   const { scrollYProgress } = useScroll({
     target: big,
@@ -123,21 +120,23 @@ const MainComponent = () => {
       <div className="bg-[url('https://cdn.prod.website-files.com/60f1486c9971edb7304fc4f5/63d3c74f2c8dce26ba36947e_1673614238746.webp')] h-screen bg-center">
         <div className="flex items-center content-center justify-between p-6 text-center align-center">
           <div>
-            <Image src={sideplus} width={100} height={100}></Image>
+            <Image src={sideplus} width={100} alt="sam" height={100}></Image>
           </div>
           <div className="flex items-center content-center text-center justify-evenly align-center gap-x-2">
             <FaInstagram size={30}></FaInstagram>
             <FaXTwitter size={30}></FaXTwitter>
             <button
               className="p-2 border-black-100"
-              onClick={() => {
-                signOut();
-                () => {
-                  router.push("/");
-                };
+              onClick={()=>{
+                if(session.data==null||session.data==undefined){
+                  signIn()
+                }
+                else{
+                  signOut()
+                }
               }}
             >
-              signout
+              {session.data==null||session.data==undefined?"signIn":"signOut"}
             </button>
           </div>
         </div>

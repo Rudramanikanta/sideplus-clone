@@ -4,7 +4,7 @@ import MainComponent from './MainComponent'
 const page = () => {
   return (
     <div>
-      <MainComponent></MainComponent>
+      
     </div>
   )
 }
