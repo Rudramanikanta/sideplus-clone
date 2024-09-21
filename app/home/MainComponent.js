@@ -16,6 +16,7 @@ import Prize from "./third.svg";
 import { Third } from "../components/Third";
 import Fourth from "../components/Fourth";
 import Membership from "../components/Membership";
+import Information from "../components/Information";
 const MainComponent = () => {
   const router = useRouter();
   const session = useSession();
@@ -194,6 +195,14 @@ const MainComponent = () => {
       </div>
       <div className="p-12">
         <Membership></Membership>
+      </div>
+      <div className="p-10">
+        <Information title="who are the Sidemen?" 
+        info="
+        We are a group of friends who love creating content and pushing the boundaries of digital entertainment. We met playing video games and become best amtes.After a few years we realized the potential 
+        of having a group that represented what we stood for, loved doing and were constantly creating - and so The Sidemen were born. Today we entertain millions every week (at least we hope they are entertained) 
+        and created content for everyone who wants to follow our journey
+        "></Information>
       </div>
     </div>
   );
