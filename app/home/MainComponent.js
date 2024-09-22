@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
-import {  useRef } from "react";
+import { useRef } from "react";
 import Second from "../components/Second";
 import image from "./image.png";
 import BTS from "./BTS.svg";
@@ -25,6 +25,27 @@ const MainComponent = () => {
     target: big,
     offset: ["start end", "end start"],
   });
+  const info = [
+    {
+      title: "who are the Sidemen?",
+      para: `We are a group of friends who love creating content and pushing the boundaries of digital entertainment. We met playing video games and become best amtes.After a few years we realized the potential 
+        of having a group that represented what we stood for, loved doing and were constantly creating - and so The Sidemen were born. Today we entertain millions every week (at least we hope they are entertained) 
+        and created content for everyone who wants to follow our journey
+        `,
+    },
+    {
+      title: "How much does Side+ cost?",
+      para: "Side+ costs almost 7 pounds ($69.99 annually). it's 1 pound per Sidemen. Harry is the one who's considered the 99p member. Jokes aside, we have bulit out a club for hardcore fans where they can connect with us on a deeper level. We know that this is a paywall but the money goes straight back into this project. We want the members of this club to feel like they are getting their moneys worth - through content, giveways and opportunities to interact and meet us.",
+    },
+    {
+      title: "Are rewards transferable?",
+      para: "Yes, loyalty rewards can be transferred from one member to another. In the case of a member transferring his/her in-life reward to person below the age of 18 a legal guardian will need to accompany them to the event. In the case of the $100,000 Club the member needs to be 18 years of age to enter and any transfers need to be made to a person above the age of 18 as well.",
+    },
+    {
+      title: "How do I cancel?",
+      para: "it's super easy to cancel your subscription. In order to cancel your subscription, simply navigate to 'Manage Subscrpption'' and click on ''cancel subscriptio''.A pop-up window will appear where you can either cancel or continue. Click continue and your subscription will be cancelled.",
+    },
+  ];
   const images = [
     {
       button: "GAME SHOWS",
@@ -128,16 +149,17 @@ const MainComponent = () => {
             <FaXTwitter size={30}></FaXTwitter>
             <button
               className="p-2 border-black-100"
-              onClick={()=>{
-                if(session.data==null||session.data==undefined){
-                  signIn()
-                }
-                else{
-                  signOut()
+              onClick={() => {
+                if (session.data == null || session.data == undefined) {
+                  signIn();
+                } else {
+                  signOut();
                 }
               }}
             >
-              {session.data==null||session.data==undefined?"signIn":"signOut"}
+              {session.data == null || session.data == undefined
+                ? "signIn"
+                : "signOut"}
             </button>
           </div>
         </div>
@@ -196,13 +218,16 @@ const MainComponent = () => {
       <div className="p-12">
         <Membership></Membership>
       </div>
-      <div className="p-10">
-        <Information title="who are the Sidemen?" 
-        info="
-        We are a group of friends who love creating content and pushing the boundaries of digital entertainment. We met playing video games and become best amtes.After a few years we realized the potential 
-        of having a group that represented what we stood for, loved doing and were constantly creating - and so The Sidemen were born. Today we entertain millions every week (at least we hope they are entertained) 
-        and created content for everyone who wants to follow our journey
-        "></Information>
+      <div className="p-10 gap-y-6">
+        {info.map((val, index) => {
+          return (
+            <Information
+              key={index}
+              title={val.title}
+              info={val.para}
+            ></Information>
+          );
+        })}
       </div>
     </div>
   );
