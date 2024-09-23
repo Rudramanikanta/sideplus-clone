@@ -17,6 +17,7 @@ import { Third } from "../components/Third";
 import Fourth from "../components/Fourth";
 import Membership from "../components/Membership";
 import Information from "../components/Information";
+import Bottom from "../components/Bottom";
 const MainComponent = () => {
   const router = useRouter();
   const session = useSession();
@@ -228,6 +229,9 @@ const MainComponent = () => {
             ></Information>
           );
         })}
+      </div>
+      <div>
+        <Bottom></Bottom>
       </div>
     </div>
   );
