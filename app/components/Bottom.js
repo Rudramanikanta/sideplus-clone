@@ -7,7 +7,7 @@ const Bottom = () => {
             <div>
                 <p className='text-white text-md'>Latest News</p>
                 <p className='mt-3 text-sm text-neutral-400 '>Chuck your emial in here to stay up to date with all things Sidemen, direct to your inboc</p>
-                <input className='p-3 mt-2 bg-neutral-600/10 hover:border-2 hover:bg-blue-700 ' placeholder='send email'></input>
+                <input className='p-3 mt-2 bg-neutral-600/10 hover:border-2 hover:border-blue-700 ' placeholder='send email'></input>
             </div>
            
         </div>
