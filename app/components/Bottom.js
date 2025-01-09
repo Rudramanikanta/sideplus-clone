@@ -2,20 +2,29 @@ import React from "react";
 
 const Bottom = () => {
   return (
-    <div className="bg-[#141414] h-[50vh] block  absolute">
+    <div className="bg-black h-[50vh] block bg-opacity-80  absolute  w-[100%]">
       <div className="flex justify-around p-4 -mb-9 gap-x-10">
         <div className="flex justify-between ">
           <div className="">
-            <div className="p-10 bg-black border-black shadow-md bg-opacity-30 h-fit w-fit rounded-xl ring-1 ring-white border-1">
-              <p className="text-white text-md">Contact Us</p>
-              <p className="mt-3 text-sm text-neutral-400 ">
-                Sidemen Entertainment Limited 123 Fake Street London E1 4UD
-                </p>
+            <div className="flex justify-center p-10 border-black shadow-md bg-neutral-900/5 bg-opacity-30 h-fit w-fit rounded-xl ring-1 ring-white border-1 ">
+              <div>
+              <p o>Sidemen.com</p>
+              <p>Merch</p>
+              <p>sides</p>
+              <p>Contact</p>
+              </div>
+              <div className="">
+              <p>Cookies</p>
+              <p>Privacy Policy</p>
+              <p>Terms and conditions</p>
+              <p>Arcade Media</p>
             </div>
+            </div>
+            
           </div>
         </div>
         <div className="">
-          <div className="p-10 bg-black border-black shadow-md bg-opacity-30 h-fit w-fit rounded-xl ring-1 ring-white border-1">
+          <div className="p-10 border-black shadow-md bg-neutral-900/10 h-fit w-fit rounded-xl ring-1 ring-white border-1">
             <p className="text-white text-md">Latest News</p>
             <p className="mt-3 text-sm text-neutral-400 ">
               Chuck your emial in here to stay up to date with all things
